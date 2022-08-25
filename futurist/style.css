@@ -70,7 +70,7 @@ body {
 }
 
 /*El diálogo de configuración*/
-.dialog.svelte {
+.dialog {
 	  /* background: #eee; */
 	  background: var(--fire-opal-100, #eee);
 }
