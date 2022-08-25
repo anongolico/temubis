@@ -79,6 +79,11 @@ body {
     background: #0f5e6c !important;
 }
 
+/*Notificaciones*/
+.notis li {
+	  background-color: var(--dark-jungle-green-100) !important;
+}
+
 
 /*Título del roz desde la vista de hilo. El título de los roz en la home
  es un h3*/
@@ -114,8 +119,8 @@ h1 {
 }
 
 /*Los tagueos*/
-.restag {
-    color: var(--fire-opal-100);
+.comentario a, .hilo-completo .contenido a {
+	  color: var(--fire-opal-100) !important;
 }
 
 
