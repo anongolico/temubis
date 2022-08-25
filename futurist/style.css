@@ -71,8 +71,7 @@ body {
 
 /*El diálogo de configuración*/
 .dialog {
-	  /* background: #eee; */
-	  background: var(--fire-opal-100, #eee);
+	  background: var(--fire-opal-100, #eee) !important;
 }
 
 /*Y del de crear rouz*/
