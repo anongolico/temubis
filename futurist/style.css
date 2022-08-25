@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Syne+Mono&display=swap');
 
+
 /*La barra de navegación superior*/
-.nav-principal {
-  background-color: var(--color-fondo1) !important;
+.nav-principal.svelte-nn1590.svelte-nn1590 {
+	border-top: solid var(--carmine-100) 2px;
+	background: var(--dark-jungle-green-50) !important;
 }
 
 
@@ -12,10 +14,9 @@
    idea descargarla y ponerla en un hosting aparte (imgur, github, etc). Si
    es sacada de un roz histórico, el roz no va a desaparecer así que es seguro
    sacarla de ahí.*/
+  /*Ejemplo de URL de imagen en Rouzed: /Media/sldkfjas8aw7ef83u3ojfejf.gif*/
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://raw.githubusercontent.com/anongolico/temubis/main/futurist/background.jpg') no-repeat fixed;
   background-size: cover !important;
-  /*El atributo cover ajusta la imagen al tamaño de la pantalla; si la relación
-   de aspecto no coincide con la pantalla, la recorta.*/
 }
 
 body {
@@ -46,41 +47,81 @@ body {
   font-size: 1.2em;
 
   /*Asegurarse que el color de texto se aplique*/
-  color: var(--floral-white-100)
+  color: var(--floral-white-100);
 }
+
+
+/*Barra lateral*/
+.menu-principal {
+  background-color: var(--dark-jungle-green-10);
+  color: var(--ming-100);
+}
+
+.menu-principal h1 {
+  padding-left: 32px;
+  margin-bottom: 90px;
+  color: var(--carmine-100) !important;
+  animation: blinker 2s step-start infinite;
+}
+
+/*Saca la foto de Rose*/
+.menu-principal-header {
+  background-image: url() !important;
+}
+
+/*El diálogo de configuración*/
+.dialog.svelte {
+	  /* background: #eee; */
+	  background: var(--fire-opal-100, #eee);
+}
+
+/*Y del de crear rouz*/
+#crear-hilo-form {
+    background: #0f5e6c !important;
+}
+
 
 /*Título del roz desde la vista de hilo. El título de los roz en la home
  es un h3*/
 h1 {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Syne Mono', monospace !important;
   font-size: 2.8rem;
   color: var(--ming-100);
 }
 
-
-.lista-comentarios {
-  padding-left: 0.1em;
-  border-left: 2px solid var(--carmine-100);
-}
-
-.comentario {
-  background-color: var(--dark-jungle-green-10);
-}
-
-.comentario:hover {
-  background-color: var(--dark-jungle-green-50) !important;
-}
-
-.form-comentario  {
-   background-color: var(--dark-jungle-green-10) !important;
-}
-
+/*Contenido del roz*/
 .cuerpo {
   padding-top: 1em !important;
   padding-left: 1em !important;
   background-color: var(--dark-jungle-green-10) !important;
 }
 
+/*Sección de comentarios*/
+.lista-comentarios {
+    padding-left: 0.1em;
+    border-left: 2px solid var(--carmine-100);
+}
+
+.comentario {
+    background-color: var(--dark-jungle-green-10);
+}
+
+.comentario:hover {
+    background-color: var(--dark-jungle-green-50) !important;
+}
+
+.form-comentario  {
+    background-color: var(--dark-jungle-green-10) !important;
+}
+
+/*Los tagueos*/
+.restag {
+    color: var(--fire-opal-100);
+}
+
+
+/*Las cajitas que contienen diferentes elementos (links de fav, hide, donar en el roz,
+ caja para agregar un comentario, etc*/
 .panel {
   background-color: var(--dark-jungle-green-10) !important;
 }
@@ -112,10 +153,6 @@ textarea:focus {
   }
 }
 
-/*Alguna mierda*/
-.fondo {
-  background-color: var(--dark-jungle-green-10) !important;
-}
 
 /*La imagen que aparece en la barra de opciones para adjuntar un archivo
  cuando se publica un comentario*/
