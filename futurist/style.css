@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Syne+Mono&display=swap');
+
+/*La barra de navegación superior*/
+.nav-principal {
+  background-color: var(--color-fondo1) !important;
+}
+
+
+#fondo-global {
+  /*Fondo personalizado. Si la imágen está en el servidor de Rouzed, no hace
+   falta porner el URL completo; no obstante, como los roz se borran, es buena
+   idea descargarla y ponerla en un hosting aparte (imgur, github, etc). Si
+   es sacada de un roz histórico, el roz no va a desaparecer así que es seguro
+   sacarla de ahí.*/
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Media/c5d71ba0f65d7e2fbf3a3ce4d416452b.gif') no-repeat fixed;
+  background-size: cover !important;
+  /*El atributo cover ajusta la imagen al tamaño de la pantalla; si la relación
+   de aspecto no coincide con la pantalla, la recorta.*/
+}
+
+body {
+
+  --fire-opal-100: #d86755ff;
+  --fire-opal-50: #d8675580;
+  --fire-opal-10: #d8675510;
+
+  --ming-100: #127182ff;
+  --ming-50: #12718280;
+  --ming-10: #12718210;
+
+  --carmine-100: #921717ff;
+  --carmine-50: #92171780;
+  --carmine-10: #92171710;
+
+  --floral-white-100: #fbfbf2ff;
+  --floral-white-50: #fbfbf280;
+  --floral-white-10: #fbfbf210;
+
+  --dark-jungle-green-100: #000f08ff;
+  --dark-jungle-green-50: #000f0880;
+  --dark-jungle-green-10: #000f0810;
+
+
+  /*Fuente texto normal*/
+  font-family: 'Azeret Mono', monospace;
+  font-size: 1.2em;
+
+  /*Asegurarse que el color de texto se aplique*/
+  color: var(--floral-white-100)
+}
+
+/*Título del roz desde la vista de hilo. El título de los roz en la home
+ es un h3*/
+h1 {
+  font-family: 'Syne Mono', monospace;
+  font-size: 2.8rem;
+  color: var(--ming-100);
+}
+
+
+.lista-comentarios {
+  padding-left: 0.1em;
+  border-left: 2px solid var(--carmine-100);
+}
+
+.comentario {
+  background-color: var(--dark-jungle-green-10);
+}
+
+.comentario:hover {
+  background-color: var(--dark-jungle-green-50) !important;
+}
+
+.form-comentario  {
+   background-color: var(--dark-jungle-green-10) !important;
+}
+
+.cuerpo {
+  padding-top: 1em !important;
+  padding-left: 1em !important;
+  background-color: var(--dark-jungle-green-10) !important;
+}
+
+.panel {
+  background-color: var(--dark-jungle-green-10) !important;
+}
+
+/*La cajita donde escribes el redactazo*/
+textarea {
+  border: 1px solid var(--fire-opal-50) !important;
+  background-color: var(--dark-jungle-green-10) !important;
+}
+
+textarea:focus {
+  border: 2px solid var(--fire-opal-100) !important;
+  background-color: var(--dark-jungle-green-50) !important;
+}
+
+
+/*El distintivo de rouzed en la barra de navegación. Se anima para
+ que parpadee cada 2 segundos*/
+.rozed {
+  animation: blinker 2s step-start infinite;
+  color: var(--carmine-100);
+  font-family: 'Syne Mono', monospace;
+  font-size: 1.6em;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/*Alguna mierda*/
+.fondo {
+  background-color: var(--dark-jungle-green-10) !important;
+}
+
+/*La imagen que aparece en la barra de opciones para adjuntar un archivo
+ cuando se publica un comentario*/
+.media-input {
+  /*Hay que setear la URL a la fuerza en nulo*/
+  background-image: url() !important;
+  background-color: var(--dark-jungle-green-10) !important;
+}
+
+
+/*Ocultar las moneditas virtuales de la barra de navegación y los comentarios
+ que algunos gordos mogólicos pagan por fijar.*/
+.super-container {
+  display: none;
+}
+
+.nav-premium {
+  visibility: hidden;
+}
