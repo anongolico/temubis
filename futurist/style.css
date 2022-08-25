@@ -12,7 +12,7 @@
    idea descargarla y ponerla en un hosting aparte (imgur, github, etc). Si
    es sacada de un roz histórico, el roz no va a desaparecer así que es seguro
    sacarla de ahí.*/
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Media/c5d71ba0f65d7e2fbf3a3ce4d416452b.gif') no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://raw.githubusercontent.com/anongolico/temubis/main/futurist/background.jpg') no-repeat fixed;
   background-size: cover !important;
   /*El atributo cover ajusta la imagen al tamaño de la pantalla; si la relación
    de aspecto no coincide con la pantalla, la recorta.*/
