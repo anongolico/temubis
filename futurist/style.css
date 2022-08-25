@@ -44,7 +44,7 @@ body {
 
   /*Fuente texto normal*/
   font-family: 'Azeret Mono', monospace;
-  font-size: 1.2em;
+  line-height: 1.5em;
 
   /*Asegurarse que el color de texto se aplique*/
   color: var(--floral-white-100);
@@ -90,6 +90,7 @@ body {
 h1 {
   font-family: 'Syne Mono', monospace !important;
   font-size: 2.8rem;
+  line-height: 1em;
   color: var(--ming-100);
 }
 
@@ -109,13 +110,28 @@ h1 {
 .comentario {
     background-color: var(--dark-jungle-green-10);
 }
+.comentario-flotante {
+  background-color: var(--dark-jungle-green-100) 
+}
 
 .comentario:hover {
     background-color: var(--dark-jungle-green-50) !important;
 }
 
+[class*="resaltado"] {
+border: 1px solid var(--fire-opal-100);
+  animation: border-blink 1s step-start infinite;
+  background-color: var(--dark-jungle-green-50) !important;
+}
+
+/*FIXME: ¿la clase es única para cada usuario?, ¿o genérica?*/
+.resaltado.svelte-6qhif0.svelte-6qhif0 {
+	background: var(--dark-jungle-green-50) !important;
+}
+
 .form-comentario  {
     background-color: var(--dark-jungle-green-10) !important;
+  border: 2px dashed var(--fire-opal-100);
 }
 
 /*Los tagueos*/
@@ -154,6 +170,12 @@ textarea:focus {
 @keyframes blinker {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes border-blink {
+  50% {
+    border-color: var(--fire-opal-10);
   }
 }
 
