@@ -118,6 +118,10 @@ h1 {
     background-color: var(--dark-jungle-green-50) !important;
 }
 
+.formulario-flotante {
+    background-color: var(--dark-jungle-green-100) !important;
+}
+
 [class*="resaltado"] {
 border: 1px solid var(--fire-opal-100);
   animation: border-blink 1s step-start infinite;
