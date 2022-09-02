@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret');
+
+.rozed{
+	animation: blinker 1s step-start infinite;
+    color: red;
+    font-family: 'Syne Mono', monospace;
+    font-size: 1.6em;
+	margin: 0.5rem 0 0 0;
+    display: flex ;
+    flex-direction: column ;
+    align-items: flex-start ;
+}
+
+.version.svelte-nn1590.svelte-nn1590 {
+    font-size: 12px;
+    position: inherit;
+    font-family: sans-serif;
+    width: max-content;
+}
+
+/*La barra de navegación superior*/
+.nav-principal.svelte-nn1590.svelte-nn1590 {
+	border-top: solid var(--carmine-100) 2px;
+	background: black !important;
+}
+
+
+#fondo-global {
+  /*Fondo personalizado. Si la imágen está en el servidor de Rouzed, no hace
+   falta porner el URL completo; no obstante, como los roz se borran, es buena
+   idea descargarla y ponerla en un hosting aparte (imgur, github, etc). Si
+   es sacada de un roz histórico, el roz no va a desaparecer así que es seguro
+   sacarla de ahí.*/
+  /*Ejemplo de URL de imagen en Rouzed: /Media/sldkfjas8aw7ef83u3ojfejf.gif*/
+  background: black;
+  background-size: cover !important;
+}
+
+body {
+
+  --fire-opal-100: #d86755ff;
+  --fire-opal-50: #d8675580;
+  --fire-opal-10: #d8675510;
+
+  --ming-100: #127182ff;
+  --ming-50: #12718280;
+  --ming-10: #12718210;
+
+  --carmine-100: #921717ff;
+  --carmine-50: #92171780;
+  --carmine-10: #92171710;
+
+  --floral-white-100: #fbfbf2ff;
+  --floral-white-50: #fbfbf280;
+  --floral-white-10: #fbfbf210;
+
+  --dark-jungle-green-100: #000f08ff;
+  --dark-jungle-green-50: #000f0880;
+  --dark-jungle-green-10: #000f0810;
+
+
+  /*Fuente texto normal*/
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+
+  /*Asegurarse que el color de texto se aplique*/
+  color: white;
+}
+
+
+/*Barra lateral*/
+.menu-principal {
+  background-color: var(--dark-jungle-green-10);
+  color: green;
+}
+
+.menu-principal h1 {
+  padding-left: 32px;
+  margin-bottom: 90px;
+  color: var(--carmine-100) !important;
+  animation: blinker 2s step-start infinite;
+}
+
+/*Saca la foto de Rose*/
+.menu-principal-header {
+  background-image: url() !important;
+}
+
+/*El diálogo de configuración*/
+.dialog {
+	  background-color: green;
+}
+
+/*Y del de crear rouz*/
+#crear-hilo-form {
+    background: #6b0000ea !important;
+}
+
+/*Notificaciones*/
+.notis li {
+	  background-color: #ffffff11 !important;
+}
+
+
+/*Título del roz desde la vista de hilo. El título de los roz en la home
+ es un h3*/
+h1 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 2.8rem;
+  line-height: 1em;
+  color: var(--ming-100);
+}
+
+/*Contenido del roz*/
+.cuerpo {
+  padding-top: 1em !important;
+  padding-left: 1em !important;
+  background-color: black !important;
+}
+
+/*Sección de comentarios*/
+.lista-comentarios {
+    padding-left: 0.1em;
+    border-left: 2px solid var(--carmine-100);
+}
+
+.comentario {
+    background-color: black;
+}
+.comentario-flotante {
+  background-color: black;
+}
+
+.comentario:hover {
+    background-color: #6b0000ea !important;
+}
+
+[class*="resaltado"] {
+border: 1px solid var(--fire-opal-100);
+  animation: border-blink 1s step-start infinite;
+  background-color: #6b0000ea !important;
+}
+
+/*FIXME: ¿la clase es única para cada usuario?, ¿o genérica?*/
+.resaltado.svelte-6qhif0.svelte-6qhif0 {
+	background: #6b0000ea !important;
+}
+
+.form-comentario  {
+    background-color: black !important;
+  border: 2.5px solid #6b0000ea;
+}
+
+/*Los tagueos*/
+.comentario a, .hilo-completo .contenido a {
+	  color: #ff0000b9 !important;
+}
+
+
+/*Las cajitas que contienen diferentes elementos (links de fav, hide, donar en el roz,
+ caja para agregar un comentario, etc*/
+.panel {
+  border-radius: 0.5em;
+}
+
+/*La cajita donde escribes el redactazo*/
+textarea {
+  border: 1px solid #6b0000ea !important;
+  background-color: black !important;
+}
+
+textarea:focus {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  outline: none; 
+  border: 2px solid green !important;
+  background-color: rgba(29, 29, 29, 0.178)  !important;
+}
+
+
+/*El distintivo de rouzed en la barra de navegación. Se anima para
+ que parpadee cada 1 segundo*/
+.rozed {
+  animation: blinker 1s step-start infinite;
+  color: red;
+  font-family: 'Syne Mono', monospace;
+  font-size: 1.6em;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes border-blink {
+  50% {
+    border-color: var(--fire-opal-10);
+  }
+}
+
+
+/*La imagen que aparece en la barra de opciones para adjuntar un archivo
+ cuando se publica un comentario*/
+.media-input {
+  /*Hay que setear la URL a la fuerza en nulo*/
+  background-image: url() !important;
+  background-color: var(--dark-jungle-green-10) !important;
+}
+
+
+/*Ocultar las moneditas virtuales de la barra de navegación y los comentarios
+ que algunos gordos mogólicos pagan por fijar.*/
+.super-container {
+  display: none;
+}
+
+.nav-premium {
+  visibility: hidden;
+}
